@@ -1,0 +1,53 @@
+.container { /* Define o tamanho do container */
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Define uma altura para que o container é proporciona à altura da tela (unidade de medida vh) */
+    margin: 0%; /* Define a espessura da margem */
+    /* border-style: dotted; /* Define o estilo da margem (apenas referência. Tirar do produto final) */
+    background-image: url('../img/back-school-seamless-pattern_1085-140.jpg'); /* Caminho para sua imagem */
+    background-repeat: repeat; /* Evita que a imagem se repita */    
+    color: rgb(144, 254, 108);
+  }
+
+  .meu-form {
+    width: 50vh; /* Defina uma largura para o form (ex: 50% da tela) */
+    height: 50vh; /* Defina um altura para o form (ex: 50% da tela) */
+    margin-left: auto; /* Define a margem esquerda como automática */
+    margin-right: auto; /* Define a margem direita como automática */
+    /* Ou pode ser escrito como: margin: 0 auto; */    
+    border: solid green; /* Define a cor da borda */
+    border-radius: 5vh;    /* Arredonda todos os quatro cantos com um raio de 15px */    
+    background-color: rgb(10, 125, 226); /* Define a cor de fundo do formulário */
+    padding: 2vh;
+    text-align: center;
+    font-size: 3vh;    
+    
+  }
+  .meu-input {
+    width: 30vh; /* Define a largura */
+    height: 1.5vh; /* Define a altura */
+    padding: 1vh; /* Adiciona um espaço interno */
+    font-size: 2vh; /* Define o tamanho da fonte */
+    background-color: rgb(205, 230, 255); /* Define a cor de fundo da caixa de entrada */
+    border-radius: 1vh;    /* Arredonda todos os quatro cantos com um raio de 15px */
+  }
+  .form-button{
+    width: 20vh; /* Define a largura */
+    height: 6vh; /* Define a altura */
+    margin: 2vh; /* Define o a espessura da margem */
+    padding: 1vh; /* Adiciona um espaço interno */
+    font-size: 2vh; /* Define o tamanho da fonte */
+    background-color: rgb(205, 230, 255); /* Define a cor de fundo da caixa de entrada */
+    border-radius: 1vh;    /* Arredonda todos os quatro cantos com um raio de 15px */
+
+  }
+  .imagem-div{
+    width: 100%; /* Define a largura */
+  }
+  .imagem-profile{    /* Estilo da imagem do perfil*/
+    width: 15vh; /* Define a largura da imagem */
+    height: 20vh; /* Define a altura da imagem */
+
+  }
+  

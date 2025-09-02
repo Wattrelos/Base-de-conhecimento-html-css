@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">   <!-- Define linguagem como Português do Brasil -->
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css"> <!-- Link para o arquivo de estilos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de autenticação</title>
+</head>
+<body>
+    <div class="container">
+        <form class="meu-form" action="authentication-successful-page.html" method="post"> <!-- Página chamada pelo método POST -->
+                <!-- Campos do formulário aqui -->
+                <div class="imagem-div"> <!-- Div para formatar a imagem -->
+                    <img src="img/login-profile.svg"
+                    alt="Descrição da imagem" class="imagem-profile">
+                </div>                
+                <label for="username">Digite o nome de usuário:</label>
+                <br>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username"
+                    class="meu-input"
+                    required pattern=".{5,}"
+                    title="Nome de usuário:"
+                    placeholder="Usuário"
+                    oninvalid="alert('Digite um nome de usuário válido');"
+                >
+                <br>
+                <label for="password">Digite a senha:</label>            
+                <br>
+                <!------------------------------------------------------------------------------------------------------------------------->
+                <!-- Observação: Esta verificação não exclui a verificação de backend                                                    -->
+                <!-- /^                                                                                                                  -->
+                <!-- (?=.*\d)              // deve conter ao menos um dígito                                                             -->
+                <!-- (?=.*[a-z])           // deve conter ao menos uma letra minúscula                                                   -->
+                <!-- (?=.*[A-Z])           // deve conter ao menos uma letra maiúscula                                                   -->
+                <!-- (?=.*[$*&@#])         // deve conter ao menos um caractere especial                                                 -->
+                <!-- [0-9a-zA-Z$*&@#]{8,}  // deve conter ao menos 8 dos caracteres mencionados                                          -->    
+                <!-- áàâãéèêíïóôõöúçñ ]+$/i // Permite assentos em letras maiúsculas e minúsculas assentuadas                            -->
+                <!-- $/                                                                                                                  -->          
+                <!------------------------------------------------------------------------------------------------------------------------->
+                <input type="password" 
+                    id="password" 
+                    name="password"
+                    class="meu-input"
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])(?:([0-9a-zA-Z$*&@#áàâãéèêíïóôõöúçñ ])(?!\1)){8,}$"
+                    title="Digite a senha:"
+                    placeholder="Senha"
+                    oninvalid="alert('A senha deve ter, pelo menos: 8 caracters, 1 letra maiúscula, 1 minúscula e 1 caracter especial.');"
+                >
+                <br>
+          <input type="submit" class="form-button" value="Autenticar">
+        </form>
+    </div>    
+</body>
+</html>
