@@ -1,0 +1,50 @@
+
+/* Formatação do menu superior */
+.container {
+    display: flex; /* Ativa o Flexbox para posicionar os filhos em linha */
+    width: 100%;   /* Garante que o contêiner ocupe toda a largura disponível */    
+  }
+  
+  .div-1 {
+    flex: 1; /* Ocupa 2/3 da largura disponível */
+    background-color: lightblue; /* Apenas para visualização */    
+    border: 1px solid #ccc; /* Apenas para visualização */
+  }
+  
+  .div-2 {
+    flex: 5; /* Ocupa 1/3 da largura disponível */    
+    background-color: lightgreen; /* Apenas para visualização */
+    border: 1px solid #ccc; /* Apenas para visualização */    
+  }
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Transforma os itens em flexbox para ficarem lado a lado */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    background-color: #f2f2f2; /* Cor de fundo do menu */
+  }
+  
+  nav li {
+    margin-right: 4vh; /* Espaçamento entre os itens */
+  }
+  
+  nav a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #090064; /* Cor da fonte */
+    font-weight: bold;
+    padding: 2vh; /* Espaçamento interno do link */
+    display: block; /* Permite aplicar padding e margin nos links */
+  }
+  
+  nav a:hover {
+    color: #ff0000; /* Muda a cor do link ao passar o mouse */
+  }
+
+  .home-logo {
+    display: block; /* Remove espaço extra abaixo da imagem */
+    max-width: 100%; /* Garante que a imagem não exceda a largura do li */
+    max-height: 6vh;    /* Mantém a proporção da imagem ao redimensionar */
+    width: 100%;     /* Opcional: Faz a imagem preencher a largura do li, se desejar */
+  }

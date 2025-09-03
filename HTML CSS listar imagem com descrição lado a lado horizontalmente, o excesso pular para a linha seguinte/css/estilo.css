@@ -1,0 +1,21 @@
+/* Formata uma listar imagem com descrição lado a lado horizontalmente, o excesso pular para a linha seguinte ------------------------- */
+.container-imagem-list {
+  display: flex; /* Ativa o layout flexível */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte */
+  gap: 1vh; /* Opcional: adiciona um espaço entre os itens */
+}
+
+.item {
+  flex: 1 1 20vh; /* Permite que cada item ocupe espaço e tenha uma largura base */
+  /* Ajuste '200px' conforme a largura desejada para sua imagem e legenda */
+  border: 1px solid #ccc; /* Opcional: para visualizar as divisões */
+  padding: 1vh; /* Opcional: para um espaçamento interno */
+  box-sizing: border-box; /* Opcional: inclui padding e border na largura total */
+  text-align: center; /* Opcional: centraliza a legenda */
+}
+
+.item img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do item */
+  height: auto; /* Mantém a proporção da imagem */
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------ */

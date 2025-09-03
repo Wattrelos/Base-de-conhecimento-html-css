@@ -1,0 +1,108 @@
+/* Formatação do menu -------------------------------------------------------------------------------------------- */
+.container {
+  display: flex; /* Torna o container um flex container */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* Distribui o espaço entre os itens */
+  height: 15vh; /* Exemplo de altura do container */
+  min-height: 46px;  
+  background-color: #f0f0f0; /* Cor de fundo */
+  font-size: max(12px, 1.2rem); /* A fonte será 16px ou 1.2rem, o que for maior */
+}
+
+.elemento-esquerda{
+  width: 15vh; /* Largura dos elementos laterais */
+  height: 100%; /* Altura dos elementos laterais */
+  min-width: 40px;
+  min-height: 40px;  
+  display: flex; /* Usado para alinhar o conteúdo dentro deste elemento */
+  justify-content: center; /* Centraliza o texto horizontalmente */
+  align-items: center; /* Centraliza o texto verticalmente */
+  flex-shrink: 0; /* Evita que o logo encolha */
+}
+
+.elemento-direita {
+  width: 20vh; /* Largura dos elementos laterais */
+  height: 15vh;  
+  display: flex; /* Usado para alinhar o conteúdo dentro deste elemento */
+  justify-content: center; /* Centraliza o texto horizontalmente */
+  align-items: center; /* Centraliza o texto verticalmente */  
+}
+
+.elemento-centro-pai {
+  display: flex;
+  flex-direction: column; /* Organiza os elementos filhos em coluna */
+  justify-content: center; /* Centraliza verticalmente os elementos filhos */
+  flex-grow: 1; /* Permite que este item ocupe o espaço restante */
+  height: 100%; /* Para ocupar a altura total do pai */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  margin: 0 1vh; /* Espaçamento para não colar nos outros elementos */
+  padding: 1vh;
+}
+
+.elemento-centro-topo, .elemento-centro-baixo {
+  display: flex; /* Alinha os links da lista lado a lado */  
+  height: 50%;
+  min-height: 20px;
+  justify-content: center; /* Centraliza verticalmente os elementos filhos */ 
+  width: 100%;
+  padding: 1vh;
+  border-radius: 0.5vh;
+
+}
+
+.search-box {
+  margin: 1vh;
+  padding: 0.8vh; 
+  width: 60%; /* Largura da caixa de busca */  
+}
+
+.logo {
+  height: 100%; /* Ajuste o tamanho do logo */
+}
+/* --------------------------------------------------------------------------------------------------------------------- */
+.navbar {
+  display: flex; /* Ativa o Flexbox para alinhar os itens */
+  justify-content: space-between; /* Distribui o espaço entre os itens */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  padding: 1vh 2vh; /* Espaçamento interno */
+  background-color: #f0f0f0; /* Cor de fundo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.nav-button {  
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 1.5vh; /* Espaçamento entre os links */
+}
+
+.nav-button img {
+  height: 2vh;
+  min-height: 10px; /* Ajuste o tamanho do ícone do carrinho */
+  vertical-align: middle; /* Alinha a imagem com o texto */
+}
+
+.navbar ul {
+  list-style: none; /* Remove os marcadores da lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Alinha os links da lista lado a lado */
+}
+
+.navbar li {
+  margin: 0 1.5vh; /* Espaçamento entre os links */
+}
+
+.navbar a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #333; /* Cor do texto dos links */
+}
+.navbar a:hover {
+  color: #ff0000; /* Muda a cor do link ao passar o mouse */
+}
+/* --------------------------------------------------------------------------------------------------------------- */
+
+
