@@ -1,0 +1,67 @@
+/* Dimensionamento da página principal ---------------------------------------------------------------*/
+  .conteudo-principal-container {
+    display: flex;
+    flex-grow: 1; /* Ocupa o espaço restante da altura */
+    
+  }
+  
+  .coluna-esquerda {
+    width: 19vh; /* Largura fixa da coluna lateral */
+    min-width: 150px;  /* Define a largura mínima da coluna */
+    background-color: #e0e0e0;
+  }
+  
+  .conteudo-direita {
+    flex-grow: 1; /* Ocupa o espaço restante horizontalmente */
+    background-color: #ffffff;
+  }
+
+/* ----------------------------------------------------------------------------------------------- */
+
+/* Dimensionamento da barra de menu ---------------------------------------------------------------*/
+.navbar {
+    display: flex; /* Alinha os elementos lado a lado */
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+    align-items: center; /* Centraliza verticalmente os elementos */
+    background-color: #f0f0f0; /* Cor de fundo do menu */
+    padding: 1vh 2vh; /* Espaçamento interno */
+  }
+  
+  .navbar-logo img {
+    height: 8vh; /* Altura do logo */
+    min-height: 50px;
+  }
+  
+  .navbar-links ul {
+    list-style: none; /* Remove os marcadores da lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinha os links da lista lado a lado */
+  }
+  
+  .navbar-links li {
+    margin: 0 1.5vh; /* Espaçamento entre os links */
+  }
+  
+  .navbar-links a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #333; /* Cor do texto dos links */
+  }
+  .navbar-links a:hover {
+    color: #ff0000; /* Muda a cor do link ao passar o mouse */
+  }
+  
+  .navbar-search input[type="text"] {
+    padding: 0.5vh;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .navbar-search button {
+    padding: 0.5vh 1vh;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  }

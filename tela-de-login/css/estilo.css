@@ -5,9 +5,9 @@
     height: 100vh; /* Define uma altura para que o container é proporciona à altura da tela (unidade de medida vh) */
     margin: 0%; /* Define a espessura da margem */
     /* border-style: dotted; /* Define o estilo da margem (apenas referência. Tirar do produto final) */
-    background-image: url('../img/back-school-seamless-pattern_1085-140.jpg'); /* Caminho para sua imagem */
+    background-image: url('../img/back-school-seamless-pattern_1085-140.jpg'); /* Caminho para tua imagem defundo */
     background-repeat: repeat; /* Evita que a imagem se repita */    
-    color: rgb(144, 254, 108);
+    color: rgb(255, 255, 255);
   }
 
   .meu-form {
@@ -18,9 +18,10 @@
     /* Ou pode ser escrito como: margin: 0 auto; */    
     border: solid green; /* Define a cor da borda */
     border-radius: 5vh;    /* Arredonda todos os quatro cantos com um raio de 15px */    
-    background-color: rgb(10, 125, 226); /* Define a cor de fundo do formulário */
+    /* background-color: rgb(10, 125, 226); /* Define a cor de fundo do formulário */
+    background-image: url('../img/abstract-geometric2.jpg'); /* Caminho para tua imagem defundo */
     padding: 2vh;
-    text-align: center;
+    text-align: center; 
     font-size: 3vh;    
     
   }
@@ -29,7 +30,7 @@
     height: 1.5vh; /* Define a altura */
     padding: 1vh; /* Adiciona um espaço interno */
     font-size: 2vh; /* Define o tamanho da fonte */
-    background-color: rgb(205, 230, 255); /* Define a cor de fundo da caixa de entrada */
+    background-color: rgb(222, 236, 249); /* Define a cor de fundo da caixa de entrada */
     border-radius: 1vh;    /* Arredonda todos os quatro cantos com um raio de 15px */
   }
   .form-button{
@@ -40,6 +41,9 @@
     font-size: 2vh; /* Define o tamanho da fonte */
     background-color: rgb(205, 230, 255); /* Define a cor de fundo da caixa de entrada */
     border-radius: 1vh;    /* Arredonda todos os quatro cantos com um raio de 15px */
+    border-width: 0.6vh;
+    border-color: #8bd39c #488453 #000 #389e26;
+    background-color: greenyellow;
 
   }
   .imagem-div{
