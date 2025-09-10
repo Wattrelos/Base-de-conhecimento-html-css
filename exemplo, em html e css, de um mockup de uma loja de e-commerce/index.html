@@ -1,0 +1,122 @@
+<!-- *Um mockup em HTML e CSS de uma página inicial de e-commerce de material de construção, conforme a descrição anterior, pode ter a seguinte
+ estrutura e estilo. Este exemplo foca na organização visual e na responsividade, utilizando flexbox e media queries para se adaptar a diferentes
+ tamanhos de tela.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Material de Construção</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>Loja de Construção</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar produtos...">
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg></button>
+            </div>
+            <div class="user-actions">
+                <a href="#">Login</a>
+                <a href="#">Minha Conta</a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Materiais Elétricos</a></li>
+                <li><a href="#">Hidráulica</a></li>
+                <li><a href="#">Pisos e Revestimentos</a></li>
+                <li><a href="#">Tintas</a></li>
+                <li><a href="#">Ferramentas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-banner">
+            <img src="img/Lorenzetti.png" alt="Banner de promoção">
+        </section>
+
+        <section class="highlight-products">
+            <h2>Ofertas da Semana</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="img/piso-ceramico-lef-toscana-bege-acetinado-44x44.png" alt="Produto 1">
+                    <h3>Piso Cerâmico</h3>
+                    <p class="price">R$ 29,90 m²</p>
+                    <button>Adicionar ao carrinho</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cimento-liz.png" alt="Produto 2">
+                    <h3>Cimento CP II</h3>
+                    <p class="price">R$ 35,00 saco</p>
+                    <button>Adicionar ao carrinho</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/tinta-acrilica-fosca-suvinil-.png" alt="Produto 3">
+                    <h3>Tinta Acrílica</h3>
+                    <p class="price">R$ 150,00 galão</p>
+                    <button>Adicionar ao carrinho</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/caixa_dagua_polietileno_500l_azul_fortlev_.png" alt="Produto 4">
+                    <h3>Caixa d'água 500L</h3>
+                    <p class="price">R$ 450,00</p>
+                    <button>Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="professional-area">
+            <h2>Área do Profissional</h2>
+            <p>Se você é arquiteto ou mestre de obras, confira nossos preços especiais para grandes volumes.</p>
+            <a href="#" class="cta-button">Ver Benefícios</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Atendimento</h4>
+                <ul>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Meus Pedidos</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Política de Troca</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Formas de Pagamento</h4>
+                <p>Ícones de Cartões, Boleto, PIX...</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Loja de Construção. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
