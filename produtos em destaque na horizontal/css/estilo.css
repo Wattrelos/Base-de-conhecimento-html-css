@@ -20,13 +20,35 @@ O código CSS estiliza o layout e garante que os produtos sejam exibidos na hori
     display: flex;    
     justify-content: space-between; /* Distribui o espaço entre os itens */
     /*---------------------------------------------------------------------------------------------------------------------*/
-    /* Você pode utilizar 'overflow-x' para transbordar na horizontal ou 'flex-wrap' para transbordar empilhados abaixo. comente uma das linhas e descomente a outra: */
-    overflow-x: auto; /* Permite rolar horizontalmente se os produtos não couberem */
+    /* Você pode utilizar 'overflow-x: auto' para transbordar na horizontal, 'overflow: hidden' caso queira utilizar animação e 'flex-wrap' para transbordar empilhados abaixo. comente uma das linhas e descomente a outra: */
+    /* overflow-x: auto; /* Permite rolar horizontalmente se os produtos não couberem */
     /* flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    overflow: hidden; /* Esconde o conteúdo que transborda, criando a ilusão de movimento */
     /*---------------------------------------------------------------------------------------------------------------------*/
+    white-space: nowrap; /* Impede a quebra de linha dos itens */
+    cursor: pointer;
     gap: 20px; /* Espaço entre os cards */
   }
-  
+  /* Container que será animado */
+  .lista-produtos-animada {
+    display: flex;
+    animation: rolar 30s linear infinite; /* Animação: nome, duração, velocidade, repetição */
+  }
+  /* Efeito de pausa ao passar o mouse */
+  .lista-produtos-container:hover .lista-produtos-animada {
+    animation-play-state: paused; /* Pausa a animação quando o mouse estiver sobre o elemento */
+  }
+  /* Animação de rolagem */
+  @keyframes rolar {
+    from {
+      transform: translateX(0); /* Começa na posição normal */
+    }
+    to {
+      /* Move o conteúdo da primeira cópia para a esquerda até o final */
+      transform: translateX(-50%);
+    }
+  }
+
   /* Estilos individuais de cada card de produto */
   .produto-card {
     flex: 1; /* Faz com que os cards ocupem o mesmo espaço disponível */
