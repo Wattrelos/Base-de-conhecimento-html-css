@@ -1,0 +1,77 @@
+/*
+2. Estilização CSS 
+O CSS é responsável por transformar a estrutura de lista vertical em um menu horizontal com os submenus ocultos por padrão.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container do menu */
+.menu-container {
+    background-color: #333;
+}
+
+/* Lista principal (nível 1) */
+.menu-principal {
+    list-style: none;
+    display: flex; /* Cria um menu horizontal usando Flexbox */
+    position: relative;
+}
+
+/* Itens do menu principal */
+.menu-principal > li {
+    position: relative;
+}
+
+/* Links do menu */
+.menu-principal a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    white-space: nowrap; /* Evita quebras de linha */
+}
+
+/* Efeito ao passar o mouse sobre os links */
+.menu-principal a:hover {
+    background-color: #555;
+}
+
+/* Estilos dos submenus (níveis 2 e 3) */
+.submenu-1, .submenu-2 {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* Posiciona o submenu abaixo do item pai */
+    left: 0;
+    background-color: #444;
+    min-width: 180px;
+    display: none; /* Esconde os submenus por padrão */
+}
+
+/* Estilização do submenu de segundo nível (nível 3) */
+.submenu-2 {
+    top: 0; /* Posiciona o submenu 3 ao lado do item pai (horizontalmente) */
+    left: 100%;
+}
+
+/* Exibir submenus ao passar o mouse */
+.menu-principal li:hover > .submenu-1 {
+    display: block; /* Exibe o submenu de primeiro nível */
+}
+
+.submenu-1 li:hover > .submenu-2 {
+    display: block; /* Exibe o submenu de segundo nível */
+}
+
+/* Ajustes visuais */
+.submenu-1 a, .submenu-2 a {
+    color: white;
+    padding: 10px 15px;
+}
+

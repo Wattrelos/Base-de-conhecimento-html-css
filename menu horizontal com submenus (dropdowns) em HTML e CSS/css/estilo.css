@@ -1,0 +1,80 @@
+/*
+
+2. Estilização CSS para o Menu Horizontal 
+
+    Remova os estilos padrão das listas: list-style: none, margin: 0, padding: 0.
+    Posicione os itens do menu principal: Use float: left e position: relative nos <li> para alinhá-los horizontalmente e permitir o posicionamento dos submenus.
+    Estilize os links: Aplique display: block para poder definir padding e margin, e text-decoration: none para remover o sublinhado padrão.
+
+*/
+.menu-principal {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-principal li {
+    position: relative; /* Importante para o posicionamento do submenu */
+    float: left;
+    border-right: 1px solid #ccc; /* Exemplo de separador */
+  }
+  
+  .menu-principal li:last-child {
+    border-right: none;
+  }
+  
+  .menu-principal li a {
+    display: block; /* Permite definir padding e margin */
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    background-color: #eee; /* Exemplo de fundo */
+  }
+  
+  .menu-principal li a:hover {
+    background-color: #ccc;
+    color: #fff;
+  }
+
+  /*
+
+3. Estilo CSS para o Submenu Dropdown 
+
+    Oculte o submenu por padrão: Defina display: none para esconder as opções.
+    Posicione o submenu: Use position: absolute para que ele saia do fluxo normal do documento e possa ser posicionado abaixo do item pai.
+    Estilize os links do submenu: Aplique estilos semelhantes aos do menu principal.
+
+    */
+
+    .submenu {
+        display: none; /* Esconde o submenu por padrão */
+        position: absolute;
+        top: 100%; /* Posiciona o submenu abaixo do item pai */
+        left: 0;
+        background-color: #f9f9f9; /* Cor de fundo do submenu */
+        border: 1px solid #ccc;
+        padding: 0;
+        margin: 0;
+        z-index: 1; /* Garante que o submenu fique acima de outros elementos */
+      }
+      
+      .submenu li {
+        float: none; /* Remove o float para que os itens fiquem em coluna */
+        border-right: none; /* Remove a borda direita dos itens do submenu */
+        width: 150px; /* Exemplo de largura para o submenu */
+      }
+      
+      .submenu li a {
+        padding: 8px 15px;
+      }
+
+      /*
+
+      
+4. Implemente o Efeito Hover
+Adicione um seletor CSS para exibir o submenu quando o mouse estiver sobre o <li> pai
+*/
+.menu-principal li:hover > .submenu {
+    display: block; /* Mostra o submenu quando o item pai é hover */
+  }
+

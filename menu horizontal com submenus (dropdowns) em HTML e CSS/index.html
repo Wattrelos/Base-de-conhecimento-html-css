@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css"> <!-- Link para o arquivo de estilos -->
+    <title>Menu horizontal tipo dropdown com submenus</title>
+</head>
+<body>
+    
+<!--
+Para criar um menu horizontal com submenus (dropdowns) em HTML e CSS, você deve usar uma lista não ordenada (<ul>) para o menu principal e
+aninhar outras listas não ordenadas dentro de itens da lista (<li>) para os submenus. No CSS, utilize float: left para os <li> principais 
+para posicioná-los horizontalmente e position: relative no <li> para permitir o posicionamento do submenu, que será estilizado com position: 
+absolute e exibido com display: none até ser acionado pelo hover. 
+1. Estrutura HTML:
+-->
+
+<!--
+HTML: O menu é construído com listas (<ul> e <li>). Um <li> com a classe dropdown contém outra lista (<ul>) para os subitens.
+CSS (ver arquivo de estilo.css):
+    display: flex; é usado no <ul> principal para alinhar os itens horizontalmente.
+    position: relative; no <li> principal permite que o submenu (.dropdown-menu) seja posicionado de forma absoluta em relação a ele.
+    display: none; esconde o submenu por padrão.
+    :hover é usado no <li> para mudar o display do .dropdown-menu para block, fazendo o submenu aparecer quando o cursor passa sobre o item.
+-->
+<nav>
+    <ul class="menu-principal">
+        <li><a href="#">Acabamento</a>
+            <ul class="submenu">
+                <li><a href="#">Azulejos</a></li>
+                <li><a href="#">Pisos</a></li>
+                <li><a href="#">Soleiras</a></li>
+            </ul>
+        <li><a href="#">Acessórios</a>
+            <ul class="submenu">
+                <li><a href="#">Cantoneiras</a></li> 
+                <li><a href="#">Dobradiças</a></li> 
+                <li><a href="#">Fechaduras</a></li> 
+                <li><a href="#">Maçanetas</a></li> 
+                <li><a href="#">Puxadores</a></li> 
+            </ul>
+        <li><a href="#">Elétrica</a></li>
+        <li><a href="#">Hidráulica</a></li>
+        <li><a href="#">Tintas</a></li>
+
+
+
+
+      <li><a href="#">Home</a></li>
+      <li>
+        <a href="#">Sobre</a>
+        <ul class="submenu">
+          <li><a href="#">Nossa História</a></li>
+          <li><a href="#">Equipe</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Serviços</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
+<!--
