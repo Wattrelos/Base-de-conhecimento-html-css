@@ -18,17 +18,31 @@ O código CSS estiliza o layout e garante que os produtos sejam exibidos na hori
   /* Container que alinha os produtos na horizontal com Flexbox */
   .lista-produtos-container {
     display: flex;    
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    /*---------------------------------------------------------------------------------------------------------------------*/
-    /* Você pode utilizar 'overflow-x: auto' para transbordar na horizontal, 'overflow: hidden' caso queira utilizar animação e 'flex-wrap' para transbordar empilhados abaixo. comente uma das linhas e descomente a outra: */
-    /* overflow-x: auto; /* Permite rolar horizontalmente se os produtos não couberem */
-    /* flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-    overflow: hidden; /* Esconde o conteúdo que transborda, criando a ilusão de movimento */
-    /*---------------------------------------------------------------------------------------------------------------------*/
-    white-space: nowrap; /* Impede a quebra de linha dos itens */
+    justify-content: space-between; /* Distribui o espaço entre os itens */   
     cursor: pointer;
     gap: 20px; /* Espaço entre os cards */
   }
+   /*---------------------------------------------------------------------------------------------------------------------*/
+    /* Você pode utilizar 'overflow: hidden' para esconder o transbordo, caso queira utilizar animação; 'overflow-x: auto' para transbordar na horizontal,  e 'flex-wrap' para transbordar para linhas abaixo.
+    /* overflow-x: auto; /* Opção 1: Permite rolar horizontalmente se os produtos não couberem */
+    /* flex-wrap: hiden; /* Opção 2: caso queira utilizar animação*/
+    /* flex-wrap: wrap; /* Opção 2: Permite quebra de linha em telas menores */ 
+    /*---------------------------------------------------------------------------------------------------------------------*/    
+  .option-1{
+    overflow-x: hidden; /* Opção 1: Esconde os produtos os produtos não couberem e vai mostrando com animação, deslocando para a esquerda. */
+    white-space: nowrap; /* Impede a quebra de linha dos itens */
+  }
+  .option-2{
+    overflow-x: auto; /* Transborda na horizonta, com barra para deslizar o menu */
+    white-space: nowrap; /* Impede a quebra de linha dos itens */
+  }
+  .option-3{
+    flex-wrap: wrap; /* Opção 2: Permite quebra do excesso de produtos para as linhas abaixo. */
+  }
+
+
+
+
   /* Container que será animado */
   .lista-produtos-animada {
     display: flex;
