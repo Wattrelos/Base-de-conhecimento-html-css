@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Multi-nível</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<!--
+Para criar um menu horizontal com submenus de 3 níveis, é necessário estruturar as listas
+<ul> aninhadas no HTML e usar CSS para estilizar e controlar a visibilidade dos submenus ao passar o mouse. 
+1. Estrutura HTML
+A base do menu é uma lista não ordenada (<ul>), onde cada item principal (<li>) pode conter uma nova <ul> 
+para criar o submenu. Para o menu de 3 níveis, a hierarquia de listas aninhadas é a seguinte: 
+-->
+<nav class="menu-container">
+    <ul class="menu-principal">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Acabamento</a>
+            <ul class="submenu-1">
+                <li><a href="#">Azulejos</a></li>
+                <li><a href="#">Pisos</a></li>
+                <li><a href="#">Porcelanato</a></li>
+                <li><a href="#">Soleiras</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Acessórios</a>
+            <ul class="submenu-1">
+                <li><a href="#">Cantoneiras</a></li> 
+                <li><a href="#">Dobradiças</a></li> 
+                <li><a href="#">Fechaduras</a></li> 
+                <li><a href="#">Maçanetas</a></li> 
+                <li><a href="#">Puxadores</a></li> 
+            </ul>
+        </li>
+        <li><a href="#">Elétrica</a>
+            <ul class="submenu-1">
+                <li><a href="#">Fiação</a> 
+                    <ul class="submenu-2">
+                        <li><a href="#">Caixas de luz</a></li>                        
+                        <li><a href="#">Fios e cabos</a></li>
+                        <li><a href="#">Eletrodutos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Quadros de luz</a>
+                    <ul class="submenu-2">
+                        <li><a href="#">Barramento</a></li>
+                        <li><a href="#">Disjuntores</a></li>
+                        <li><a href="#">Terminais</a></li>                        
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Hidráulica</a>
+            <ul class="submenu-1">
+                <li><a href="#">Caixas d'água</a></li>
+                <li><a href="#">Torneiras</a></li>                          
+                <li><a href="#">Tubos e conexões</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Tintas</a>
+            <ul class="submenu-1">
+                <li><a href="#">Acessórios</a>
+                    <ul class="submenu-2">
+                        <li><a href="#">Lixas</a></li>
+                        <li><a href="#">Pincéis</a></li>
+                        <li><a href="#">Trinchas</a></li>                        
+                    </ul>
+                </li>
+                <li><a href="#">Acrílica</a></li>
+                <li><a href="#">Esmalte</a></li>
+                <li><a href="#">Latex</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<!--
+HTML: As listas <ul> aninhadas criam a hierarquia dos níveis do menu.
+Flexbox: O display: flex no .menu-principal alinha os itens principais horizontalmente.
+Posicionamento: position: relative nos itens do menu pai e position: absolute nos submenus são essenciais para que os submenus se posicionem corretamente abaixo e ao lado dos seus pais, sem afetar o fluxo do documento.
+Ocultar/Exibir: display: none esconde os submenus inicialmente. A regra :hover no <li> do item pai, seguida pelo seletor de filho (>), exibe o submenu correspondente.
+Ajuste de posição: O top: 100% posiciona o primeiro submenu abaixo do item pai, enquanto o left: 100% e top: 0 posicionam o submenu de terceiro nível ao lado do seu pai, para criar o efeito cascata horizontal. 
+-->
+
+</body>
+</html>

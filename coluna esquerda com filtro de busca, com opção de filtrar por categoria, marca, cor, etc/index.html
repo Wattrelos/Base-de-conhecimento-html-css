@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Filtro Lateral</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- O CSS formata o layout com uma coluna lateral e a área de conteúdo principal. -->
+</head>
+<body>
+    <div class="container">
+
+<!--
+Para criar uma coluna lateral com filtros de busca, você precisará usar
+HTML para a estrutura, CSS para o layout e o estilo, e JavaScript para a funcionalidade de filtragem dinâmica.
+Aqui está um exemplo completo que você pode usar como ponto de partida:
+1. Estrutura HTML
+O HTML define a barra lateral (<aside>), o formulário (<form>) e os grupos de filtros (<fieldset>).
+-->
+        <!-- Coluna da esquerda com filtros -->
+        <aside class="sidebar">
+            <div class="filter-group">
+                <h3>Filtrar por Categoria</h3>
+                <label><input type="checkbox" name="categoria" value="ferramentas"> Ferramentas</label>
+                <label><input type="checkbox" name="categoria" value="eletrica"> Elétrica</label>
+                <label><input type="checkbox" name="categoria" value="hidraulica"> Hidráulica</label>
+            </div>
+
+            <div class="filter-group">
+                <h3>Filtrar por Marca</h3>
+                <label><input type="checkbox" name="marca" value="bosch"> Bosch</label>
+                <label><input type="checkbox" name="marca" value="dewalt"> Dewalt</label>
+                <label><input type="checkbox" name="marca" value="tigre"> Tigre</label>
+            </div>
+
+            <div class="filter-group">
+                <h3>Filtrar por Cor</h3>
+                <label><input type="checkbox" name="cor" value="azul"> Azul</label>
+                <label><input type="checkbox" name="cor" value="vermelho"> Vermelho</label>
+                <label><input type="checkbox" name="cor" value="preto"> Preto</label>
+            </div>
+        </aside>
+
+        <!-- Conteúdo principal onde os produtos serão exibidos -->
+        <main class="content">
+            <!-- Os produtos serão exibidos aqui via JavaScript -->
+            <h2>Resultados da Busca</h2>
+            <div id="product-list">
+                <!-- Exemplo de produto, para demonstração -->
+                <div class="product" data-categoria="ferramentas" data-marca="bosch" data-cor="azul">
+                    Produto: Furadeira Bosch Azul
+                </div>
+                <div class="product" data-categoria="eletrica" data-marca="dewalt" data-cor="vermelho">
+                    Produto: Serra Elétrica Dewalt Vermelha
+                </div>
+                <div class="product" data-categoria="hidraulica" data-marca="tigre" data-cor="preto">
+                    Produto: Cano Tigre Preto
+                </div>
+                <div class="product" data-categoria="ferramentas" data-marca="dewalt" data-cor="preto">
+                    Produto: Chave de Fenda Dewalt Preta
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/script.js"></script> <!-- O JavaScript lida com a lógica de filtragem, mostrando ou escondendo os produtos com base nas seleções do usuário. -->
+</body>
+</html>
+

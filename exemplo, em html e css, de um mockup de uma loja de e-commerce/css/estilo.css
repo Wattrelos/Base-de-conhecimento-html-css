@@ -310,7 +310,7 @@ h2 {
 /* Importação da fonte do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Reset básico e variáveis de cores */
+/* Identidade visual. Reset básico e variáveis de cores */
 :root {
     --primary-color: #f7931e; /* Laranja forte */
     --secondary-color: #333; /* Cinza escuro para texto */
