@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container-lista {
+            display: flex; /* Transforma a lista em um container flexível */
+            justify-content: space-evenly; /* Distribui o espaço entre os itens */
+            list-style: none; /* Opcional: Remove os marcadores de lista */
+            padding: 0; /* Opcional: Remove o preenchimento padrão da lista */
+        }
+
+        .container-lista li {
+            /* Estilos adicionais para os itens (ex: cor, padding, etc.) */
+            background-color: lightblue;
+            margin: 0; /* Para não haver margens que interfiram no espaçamento */
+            flex: 1; /* Faz com que cada item da lista cresça para ocupar o espaço */
+            text-align: center; /* Opcional: Centraliza o texto dentro do item */
+            padding: 10px; /* Opcional: Adiciona algum preenchimento */
+            border: 1px solid #05038e; /* Opcional: Para visualização */
+            border-radius: 10px;
+            box-sizing: border-box; /* Para incluir padding e borda no tamanho total */
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="container-lista">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+    </ul>
+
+
+</body>
+
+</html>
